@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractals</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: #a59797;
+        }
+        #controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            background: rgba(113, 96, 53, 0.721);
+            padding: 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        #fractalType {
+            background: rgba(118, 36, 36, 0.712);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #9070708c;
+            border: 1px solid #53474728;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+        }
+        canvas {
+            cursor: zoom-in;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="fractalType">Choose Fractal: </label>
+        <select id="fractalType">
+            <option value="mandelbrot">Mandelbrot Set</option>
+            <option value="julia">Julia Set</option>
+            <option value="sierpinski">Sierpinski Triangle</option>
+        </select>
+    </div>
+    <canvas id="fractalCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
